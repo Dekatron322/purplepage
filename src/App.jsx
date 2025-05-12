@@ -40,62 +40,62 @@ import UserEventDetails from "./pages/events/UserEventDetails";
 import SuccessModal from "./components/Modals/SuccessModal";
 
 const clientId =
-  "901500469662-1c1vhjf4sqtentao8up1joi4bj4sn6qk.apps.googleusercontent.com";
+	"901500469662-1c1vhjf4sqtentao8up1joi4bj4sn6qk.apps.googleusercontent.com";
 const queryClient = new QueryClient();
 
 const App = () => {
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-    }
-    gapi.load("client:auth2", start);
-  });
-  return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="/events/:id" element={<EventDetails />} />
-          <Route path="/user-events/:id" element={<UserEventDetails />} />
-          <Route path="/business/:id" element={<Business />} />
-          <Route path="/singleproduct/:id" element={<SingleProduct />} />
-          <Route path="events" element={<Events />} />
-          <Route path="userevents" element={<UserEvents />} />
-          <Route path="appblog" element={<Blog />} />
-          <Route path="/appblog/:id" element={<BlogDetails />} />
-          <Route path="/blog/:id" element={<HomeBlogDetails />} />
-          <Route path="apphome" element={<AppHome />} />
-          <Route path="appads" element={<Ads />} />
-          <Route path="features" element={<Features />} />
-          <Route path="appwishlist" element={<Wishlist />} />
-          <Route path="*" element={<Notfound />} />
-          <Route path="/ads/:id" element={<AdsDetails />} />
-          <Route path="/userprofile/:id" element={<User />} />
-          <Route path="terms" element={<Terms />} />
-          <Route path="privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="faq" element={<Faqs />} />
-          <Route path="contact" element={<ContactUs />} />
-          <Route path="auth" element={<Auth />} />
-          <Route path="verify" element={<Verification />} />
-          <Route path="signin" element={<Signin />} />
-          <Route path="interest" element={<Interest />} />
-          <Route path="/personal" element={<PersonalAccount />} />
-          <Route path="/checkout" element={<CheckOut />} />
-          <Route path="/writeblog" element={<WriteBlog />} />
-          <Route path="/verification" element={<Verify />} />
-          <Route path="/stepper" element={<StepperForm />} />
-          <Route path="/blog" element={<HomeBlog />} />
-          <Route path="/request-reset" element={<RequestReset />} />
-          <Route path="/reset-password" element={<ForgotPassword />} />
-          <Route path="/success" element={<SuccessModal />} />
-        </Routes>
-      </BrowserRouter>
-    </QueryClientProvider>
-  );
+	useEffect(() => {
+		function start() {
+			gapi.client.init({
+				clientId: clientId,
+				scope: "",
+			});
+		}
+		gapi.load("client:auth2", start);
+	});
+	return (
+		<QueryClientProvider client={queryClient}>
+			<BrowserRouter>
+				<Routes>
+					<Route index element={<Home />} />
+					<Route path='about' element={<About />} />
+					<Route path='/events/:id' element={<EventDetails />} />
+					<Route path='/user-events/:id' element={<UserEventDetails />} />
+					<Route path='/business/:id' element={<Business />} />
+					<Route path='/singleproduct/:id' element={<SingleProduct />} />
+					<Route path='events' element={<Events />} />
+					<Route path='userevents' element={<UserEvents />} />
+					<Route path='appblog' element={<Blog />} />
+					<Route path='/appblog/:id' element={<BlogDetails />} />
+					<Route path='/blog/:id' element={<HomeBlogDetails />} />
+					<Route path='apphome' element={<AppHome />} />
+					<Route path='appads' element={<Ads />} />
+					<Route path='features' element={<Features />} />
+					<Route path='appwishlist' element={<Wishlist />} />
+					<Route path='*' element={<Notfound />} />
+					<Route path='/ads/:id' element={<AdsDetails />} />
+					<Route path='/userprofile/:id' element={<User />} />
+					<Route path='terms' element={<Terms />} />
+					<Route path='privacy-policy' element={<PrivacyPolicy />} />
+					<Route path='faq' element={<Faqs />} />
+					<Route path='contact' element={<ContactUs />} />
+					<Route path='auth' element={<Auth />} />
+					<Route path='verify' element={<Verification />} />
+					<Route path='signin' element={<Signin />} />
+					<Route path='interest' element={<Interest />} />
+					<Route path='/personal' element={<PersonalAccount />} />
+					<Route path='/checkout' element={<CheckOut />} />
+					<Route path='/writeblog' element={<WriteBlog />} />
+					<Route path='/verification' element={<Verify />} />
+					<Route path='/stepper' element={<StepperForm />} />
+					<Route path='/blog' element={<HomeBlog />} />
+					<Route path='/request-reset' element={<RequestReset />} />
+					<Route path='/reset-password' element={<ForgotPassword />} />
+					<Route path='/success' element={<SuccessModal />} />
+				</Routes>
+			</BrowserRouter>
+		</QueryClientProvider>
+	);
 };
 
 export default App;
