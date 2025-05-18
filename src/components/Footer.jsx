@@ -4,8 +4,8 @@ import Twitter from "../assets/twitter.png";
 import Instagram from "../assets/instagram.png";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
-import Appstore from "../assets/Appstore.png";
-import Playstore from "../assets/Playstore.png";
+import Appstore from "../assets/appstore01.png";
+import Playstore from "../assets/playstore01.png";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -69,11 +69,11 @@ const Footer = () => {
 				<article>
 					<h4>Install App</h4>
 					<div className='footer__install__app'>
-						<a href='#' target='_blank' rel='noreferre noopener'>
-							<img src={Appstore} alt='facebook' />
+						<a href='#' rel='noreferre noopener'>
+							<img src={Appstore} alt='facebook' style={{ height: "40px" }} />
 						</a>
-						<a href='#' target='_blank' rel='noreferre noopener'>
-							<img src={Playstore} alt='facebook' />
+						<a href='#' rel='noreferre noopener'>
+							<img src={Playstore} alt='facebook' style={{ height: "40px" }} />
 						</a>
 					</div>
 				</article>

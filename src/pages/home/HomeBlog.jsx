@@ -6,35 +6,35 @@ import BlogFilter from "../../components/App/BlogFliter";
 import { getBlogs } from "../../apis/BlogApis";
 
 const HomeBlog = () => {
-  const [blogs, setBlogs] = useState([]);
-  const [filteredBlogs, setFilteredBlogs] = useState([]);
-  const [loading, setLoading] = useState(false);
+	const [blogs, setBlogs] = useState([]);
+	const [filteredBlogs, setFilteredBlogs] = useState([]);
+	const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchBlogs = async () => {
-      try {
-        setLoading(true);
-        const response = await getBlogs({ pageParam: 0 });
-        const { blogs } = response;
-        console.log(blogs[0].id, "first id beofre filterting ");
-        setBlogs(blogs);
-        setLoading(false);
-      } catch (error) {
-        console.log("Error fetching blogs:", error);
-      }
-    };
+	useEffect(() => {
+		const fetchBlogs = async () => {
+			try {
+				setLoading(true);
+				const response = await getBlogs({ pageParam: 0 });
+				const { blogs } = response;
+				console.log(blogs[0].id, "first id beofre filterting ");
+				setBlogs(blogs);
+				setLoading(false);
+			} catch (error) {
+				console.log("Error fetching blogs:", error);
+			}
+		};
 
-    fetchBlogs();
-  }, []);
+		fetchBlogs();
+	}, []);
 
-  return (
-    <>
-      <Navbar />
-      <BlogFilter setBlogs={setBlogs} blogs={blogs} />
-      <HomeBlogContent blogs={blogs} />
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Navbar />
+			<BlogFilter setBlogs={setBlogs} blogs={blogs} />
+			<HomeBlogContent blogs={blogs} />
+			<Footer />
+		</>
+	);
 };
 
 export default HomeBlog;
